@@ -1,0 +1,69 @@
+@supports (animation-timeline: view()) {
+    @keyframes fade-in {
+      from { opacity: 0 }
+      to   { opacity: 1 }
+    }
+    
+    @keyframes shadow-in {
+      to { box-shadow: 0 10px 10px #0003 }
+    }
+    
+    nav, nav > h2 {
+      animation: fade-in auto linear both;
+      animation-timeline: scroll();
+      animation-range: 0% 100px;
+      
+    }
+    
+    nav {
+      animation-name: shadow-in;
+      color: white;
+    }
+  }
+  
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background: var(--surface);
+    padding: 2rem;
+  }
+  
+  html {
+    --surface: hsl(0, 4%, 69%);
+    --text: hsl(0, 0%, 0%);
+    
+    block-size: 100%;
+    inline-size: 100%;
+    
+    background-color: var(--surface);
+    color: var(--text);
+  }
+  
+  body {
+    min-block-size: 100%;
+    min-inline-size: 100%;
+    margin: 0;
+    padding-block-end: 20vh;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+  }
+  
+  main {
+    max-inline-size: 50ch;
+    margin-inline: auto;
+  }
+  
+  h2 {
+    margin: 0;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1.25rem;
+    line-height: 2;
+  }
+
+  i {
+    color: red;
+  }

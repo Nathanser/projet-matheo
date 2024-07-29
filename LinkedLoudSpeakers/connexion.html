@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="connexion.css">
+    <link rel="shortcut icon" href="img/logo.png">
+    <title>Connexion</title>
+</head>
+<body>
+    <!-- Conteneur principal de la page -->
+    <div class="container">
+        <!-- Titre de la section de connexion -->
+        <h2>Connexion</h2>
+
+        <!-- Formulaire de connexion -->
+        <form id="loginForm">
+            <!-- Champ pour le nom d'utilisateur -->
+            <input type="text" id="username" placeholder="Nom d'utilisateur" required>
+
+            <!-- Champ pour le mot de passe -->
+            <input type="password" id="password" placeholder="Mot de passe" required>
+
+            <!-- Bouton du formulaire -->
+            <input type="submit" value="Se Connecter">
+        </form>
+
+        <!-- Lien vers la création d'un nouveau compte -->
+        <p class="create-account">Pas encore de Compte ?</p>
+        <a href="inscription.html"><input type="submit" value="Je m'inscris"></a>
+    </div>
+
+    <!-- Conteneur pour afficher les messages (connexion réussie ou échouée) -->
+    <div class="message-container" id="messageContainer"></div>
+
+    <!-- Script JavaScript pour la gestion du formulaire de connexion -->
+    <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+        // Empêche l'envoi du formulaire par défaut
+        event.preventDefault();
+
+        // Récupère les valeurs des champs du formulaire
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var messageContainer = document.getElementById("messageContainer");
+
+        // Vérifie les identifiants et affiche un message approprié
+        if (username === "matheo" && password === "2023") {
+            messageContainer.innerText = "Connexion réussie!";
+            messageContainer.classList.remove("error");
+        } else {
+            messageContainer.innerText = "Identifiant ou mot de passe incorrect.";
+            messageContainer.classList.add("error");
+        }
+
+        // Affiche le conteneur de message
+        messageContainer.style.display = "block";
+
+        // Masque le message après 5 secondes
+        setTimeout(function() {
+            messageContainer.style.display = "none";
+        }, 5000);
+    });
+    </script>
+</body>
+</html>

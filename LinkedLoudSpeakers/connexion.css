@@ -1,0 +1,98 @@
+/* Style pour la liste de liens de navigation */
+ul li {
+    margin: 10;
+    padding: 4;
+    font-size: 150%;
+    position: left; /* "left" n'est pas une valeur valide pour "position" */
+    display: inline-block;
+}
+
+/* Style pour les liens de navigation */
+ul li a {
+    text-decoration: none;
+    color: #ff6100;
+    letter-spacing: 0.1rem;
+}
+
+/* Style pour le corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('./img/fond\ connexion.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style pour le conteneur principal */
+.container {
+    max-width: 400px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+/* Style pour le titre h2 */
+h2 {
+    color: #333;
+}
+
+/* Style pour les champs de texte */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 6px;
+    margin: 9px 0;
+    border: 1.2px solid black;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Style pour les champs de texte en focus */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    box-shadow: 0 0 5px red
+}
+
+/* Style pour le bouton de soumission */
+input[type="submit"] {
+    background-color: black;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Style pour le bouton de soumission en survol */
+input[type="submit"]:hover {
+    transition: 0.5s;
+    background-color: gray;  
+}
+
+/* Style pour le conteneur de message */
+.message-container {
+    position: fixed;
+    top: 180;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 300px;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    display: none;
+    font-size: 28px;
+}
+
+/* Style pour le conteneur de message en cas d'erreur */
+.message-container.error {
+    background-color: #FF5733;
+}

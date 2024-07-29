@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/A propos.css">
+    <title>A Propos</title>
+</head>
+<body>
+    
+<nav>
+    <b><h2>A Propos de LinkedLoudSpeakers</h2>
+  </nav>
+  
+  <main>
+         <p>Bienvenue chez LinkedLoudSpeakers, votre destination ultime pour une expérience sonore exceptionnelle. 
+            Chez LinkedLoudSpeakers, nous nous engageons à offrir des enceintes de qualité supérieure qui transcendent les attentes auditives.</p>
+         
+            <p>Notre Passion pour le Son 
+                À l'origine de LinkedLoudSpeakers se trouve une passion profonde pour la musique et le son de qualité. Nous croyons que chaque note, chaque mélodie, mérite d'être appréciée dans toute sa splendeur, et c'est cette conviction qui guide notre engagement envers l'excellence sonore.</p>
+         
+                <p>Design Innovant, Son Impeccable 
+                    Associez l'esthétique à la fonctionnalité avec nos enceintes au design avant-gardiste. 
+                    Nous croyons que le son exceptionnel devrait être accompagné d'un style exceptionnel. Explorez notre collection, où l'innovation esthétique rencontre une qualité audio inégalée.</p>
+         
+                    <p>Chez LinkedLoudSpeakers, nous ne proposons pas simplement des enceintes, nous offrons une invitation à l'émotion musicale. Transformez votre espace en un lieu où le son prend vie. Découvrez notre collection et connectez-vous à l'expérience sonore ultime.</p>
+  
+                            <i><p>LinkedLoudSpeakers Votre son, votre style, votre expérience.</p></i>
+  </main>
+
+        
+</body>
+</html>

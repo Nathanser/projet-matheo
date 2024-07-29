@@ -1,0 +1,62 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/connexion.css">
+    <link rel="shortcut icon" href="img/logo.png">
+    <!-- Définir le titre de la page -->
+    <title>Inscription</title>
+    <!-- Lien vers la feuille de style externe -->
+    <link rel="stylesheet" href="../connexion.css">
+</head>
+
+<body>
+        <div class="container">
+            
+            <h2>Inscription</h2>
+            <!-- Formulaire d'inscription avec des champs de saisie et un bouton de soumission -->
+            <form action="insertion.php" method ="POST">
+                <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+                <input type="password" name="password" placeholder="Mot de passe" required>
+                <input type="text" name="email" placeholder="Adresse e-mail" required>
+                <input type="submit" value="Inscription">
+            </form>
+           <!-- Zone d'affichage du message de confirmation -->
+            <div class="confirmation-message" id="confirmationMessage"></div>
+
+            <!-- Lien vers la connexion si l'utilisateur possède déjà un compt -->
+        <p class="create-account">Vous avez déjà un compte ?</p>
+        <a href="connexion.html"><input type="submit" value="Je me connecte"></a>
+        </div>
+
+        <!-- Script JavaScript formulaire -->
+        <script>
+            document.getElementById("registrationForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                // Récupérer les valeurs saisies par l'utilisateur
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+                var email = document.getElementById("email").value;
+                var confirmationMessage = document.getElementById("confirmationMessage");
+
+                // Vérifier si les valeurs saisies correspondent aux valeurs
+                if (username === "" && password === "" && confirmPassword === "" && email === "") {
+                    // Afficher un message de réussite si les informations sont correctes
+                    confirmationMessage.innerText = `Confirmation du compte pour ${username} (${email}) réussie!`;
+                    confirmationMessage.className = "confirmation-success";
+                } else {
+                    // Afficher un message d'erreur si les informations sont incorrectes
+                    confirmationMessage.innerText = "Les informations d'inscription sont incorrectes.";
+                    confirmationMessage.className = "confirmation-error";
+                }
+
+                // Afficher le message de confirmation
+                confirmationMessage.style.display = "block";
+            });
+        </script>
+     </body>
+</html>
+
+
