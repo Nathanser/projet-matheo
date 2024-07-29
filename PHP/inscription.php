@@ -7,7 +7,7 @@
     <!-- Définir le titre de la page -->
     <title>Inscription</title>
     <!-- Lien vers la feuille de style externe -->
-    <link rel="stylesheet" href="../../connexion.css">
+    <link rel="stylesheet" href="../connexion.css">
 </head>
 
 <body>
